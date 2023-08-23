@@ -1186,8 +1186,8 @@ const Form = () => {
 																</div>
 
 																{/** Health Information Area */}
-																{/** 
-																<div className="tw-w-full tw-h-fit tw-p-2 tw-gap-10 tw-flex tw-flex-col tw-justify-start tw-items-start">
+
+																<div className="tw-w-full tw-h-fit tw-p-2 tw-gap-10 tw-hidden tw-flex-col tw-justify-start tw-items-start">
 																	<div className="tw-w-full tw-gap-3 tw-flex tw-flex-col tw-justify-start tw-items-start">
 																		<h4 className="tw-w-full tw-text-tw-left tw-font-title tw-font-medium tw-text-2xl tw-text-[#7862AF]">
 																			Health Information
@@ -1248,7 +1248,7 @@ const Form = () => {
 																				</FormControl>
 																			)}
 																		/>
-																		
+
 																		<Controller
 																			name={`insured_person[${index}].allergies`}
 																			control={control}
@@ -1298,7 +1298,6 @@ const Form = () => {
 																		/>
 																	</div>
 																</div>
-																*/}
 															</div>
 														</AccordionDetails>
 													</MuiAccordion>
@@ -1369,6 +1368,7 @@ const Form = () => {
 																		control={<Radio color="secondary" />}
 																		label="Other"
 																	/>
+																	{/**
 																	<FormControlLabel
 																		name="applicant_type"
 																		id="company"
@@ -1376,6 +1376,7 @@ const Form = () => {
 																		control={<Radio color="secondary" />}
 																		label="Company"
 																	/>
+																	 */}
 																</RadioGroup>
 															</FormControl>
 														)}
