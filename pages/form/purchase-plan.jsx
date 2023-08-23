@@ -356,10 +356,7 @@ const Form = () => {
 			},
 			onError: (error) => {
 				console.log(error);
-				alertError(
-					'Email exists',
-					'The email provided already exists or is a duplicate. Please check and try again'
-				);
+				alertError('Error', error?.message);
 			},
 		}
 	);
