@@ -405,6 +405,17 @@ const Dashboard = () => {
 										{USER_DETAILS?.user_policy_transaction?.duration} days
 									</p>
 								</div>
+								<div className="tw-w-full tw-grid tw-grid-cols-2">
+									<div className="tw-w-full tw-flex tw-justify-start tw-items-center tw-text-sm tw-text-gray-500">
+										Price
+									</div>
+									<p className="tw-w-full tw-flex tw-justify-end tw-text-sm tw-text-gray-600 tw-font-bold">
+										{Intl.NumberFormat('en-US', {
+											style: 'currency',
+											currency: 'USD',
+										}).format(USER_DETAILS?.user_policy_transaction?.price)}
+									</p>
+								</div>
 							</div>
 							<div className="tw-w-full tw-flex tw-flex-col tw-gap-2 tw-py-3 tw-border-b">
 								{USER_DETAILS?.user_policy_transaction?.extension_start_date ? (
@@ -452,6 +463,21 @@ const Dashboard = () => {
 										</p>
 									</div>
 								) : null}
+								{USER_DETAILS?.user_policy_transaction?.extension_price ? (
+									<div className="tw-w-full tw-grid tw-grid-cols-2">
+										<div className="tw-w-full tw-flex tw-justify-start tw-items-center tw-text-sm tw-text-gray-500">
+											Extension Price
+										</div>
+										<p className="tw-w-full tw-flex tw-justify-end tw-text-sm tw-text-gray-600 tw-font-bold">
+											{Intl.NumberFormat('en-US', {
+												style: 'currency',
+												currency: 'USD',
+											}).format(
+												USER_DETAILS?.user_policy_transaction?.extension_price
+											)}
+										</p>
+									</div>
+								) : null}
 							</div>
 							<div className="tw-w-full tw-flex tw-flex-col tw-gap-2">
 								{USER_DETAILS?.insured_person?.length > 1 && (
@@ -466,7 +492,7 @@ const Dashboard = () => {
 								)}
 								<div className="tw-w-full tw-grid tw-grid-cols-2">
 									<div className="tw-w-full tw-flex tw-justify-start tw-text-sm tw-font-semibold tw-text-gray-500">
-										Price
+										Total Price
 									</div>
 									{USER_DETAILS?.user_policy_transaction?.extension_price ? (
 										<span className="tw-w-full tw-flex tw-justify-end tw-items-end tw-gap-1 tw-text-xl tw-text-[#8e6abf] tw-font-bold">
