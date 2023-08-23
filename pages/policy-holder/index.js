@@ -234,7 +234,7 @@ const Dashboard = () => {
 									<div
 										key={index}
 										className="tw-w-full tw-h-fit tw-bg-white tw-shadow-sm xl:tw-col-span-2 tw-rounded-lg tw-py-5 tw-px-8 tw-flex tw-flex-col tw-justify-center tw-items-start tw-gap-5">
-										<div className="tw-w-full tw-flex tw-justify-between tw-items-center">
+										<div className="tw-w-full tw-flex tw-justify-between tw-items-center tw-pb-3 tw-border-b-2">
 											<h3 className="tw-font-medium tw-text-xl tw-text-[#8e6abf]">
 												Traveller {index + 1}
 											</h3>
