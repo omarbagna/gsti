@@ -2090,6 +2090,29 @@ const Form = () => {
 									</div>
 								</div>
 							</form>
+
+							{showMore && formStep === 2 && (
+								<div className="tw-block tw-mt-10">
+									<Accordion questionsAnswers={planTabsData} />
+								</div>
+							)}
+
+							{formStep === 2 && (
+								<div
+									onClick={handleShowDetails}
+									className="tw-group tw-cursor-pointer tw-w-fit tw-flex tw-justify-start tw-items-center tw-gap-2 tw-pt-2 tw-mt-10">
+									<div className="tw-flex tw-justify-center tw-items-center tw-transition-all tw-duration-500 tw-ease-in-out tw-rounded-full tw-h-4 tw-w-4 tw-text-white tw-bg-[#8e6abf] group-hover:tw-shadow-lg group-hover:tw-shadow-[#8e6abf]/50">
+										{!showMore ? (
+											<IoAdd className="tw-text-sm" />
+										) : (
+											<BiMinus className="tw-text-sm" />
+										)}
+									</div>
+									<p className="tw-font-bold tw-text-sm tw-text-[#8e6abf]">
+										{!showMore ? 'Show plan details' : 'Hide plan details'}
+									</p>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
@@ -2274,26 +2297,7 @@ const Form = () => {
 							</p>
 						</a>
 					</div>
-					{showMore && (
-						<div className="tw-block">
-							<Accordion questionsAnswers={planTabsData} />
-						</div>
-					)}
 
-					<div
-						onClick={handleShowDetails}
-						className="tw-group tw-cursor-pointer tw-w-fit tw-flex tw-justify-start tw-items-center tw-gap-2 tw-pt-2 tw-mt-6">
-						<div className="tw-flex tw-justify-center tw-items-center tw-transition-all tw-duration-500 tw-ease-in-out tw-rounded-full tw-h-4 tw-w-4 tw-text-white tw-bg-[#8e6abf] group-hover:tw-shadow-lg group-hover:tw-shadow-[#8e6abf]/50">
-							{!showMore ? (
-								<IoAdd className="tw-text-sm" />
-							) : (
-								<BiMinus className="tw-text-sm" />
-							)}
-						</div>
-						<p className="tw-font-bold tw-text-sm tw-text-[#8e6abf]">
-							{!showMore ? 'Show details' : 'Hide details'}
-						</p>
-					</div>
 					<div
 						data-aos="fade-up"
 						data-aos-duration="1200"

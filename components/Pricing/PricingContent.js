@@ -63,7 +63,7 @@ const PricingContent = () => {
 												</div>
 											</>
 										)}
-										<Link href="/contact">
+										<Link href="/form/get-quote">
 											<a className="btn-style-one light-green-color">
 												Purchase Plan <i className="bx bx-chevron-right"></i>
 											</a>
