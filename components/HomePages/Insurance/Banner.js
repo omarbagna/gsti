@@ -24,15 +24,15 @@ const Banner = () => {
 								data-aos-duration="1200"
 								data-aos-delay="100"
 								className="nunito-font">
-								Welcome to the Ghana Safe Stay Programme
+								Welcome to the Visitors Health Insurance Platform
 							</h1>
 							<p
 								data-aos="fade-up"
 								data-aos-duration="1200"
 								data-aos-delay="200">
-								Ghana welcomes you with open arms! The Ghana Safe Stay Programme
-								(GSSP) ensures that you have a seamless, safe, and medically
-								secure trip within our beautiful country
+								Ghana welcomes you with open arms! The Visitors Health Insurance
+								Platform (VHIS) ensures that you have a seamless, safe, and
+								medically secure trip within our beautiful country
 							</p>
 							<div
 								className="btn-box"

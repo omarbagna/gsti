@@ -13,7 +13,7 @@ const Target = () => {
 						<div className="goal-content style-two">
 							<span className="sub-title">Why Us</span>
 							<h2 className="nunito-font">
-								Why Ghana Safe Stay Programme (GSSP)?
+								Why Visitors Health Insurance Platform (VHIS)?
 							</h2>
 							<ul className="overview-list">
 								<li data-aos="fade-up" data-aos-duration="1200">

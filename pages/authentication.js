@@ -30,7 +30,7 @@ const Authentication = () => {
 							</a>
 						</Link>
 						<Link href="/" passHref>
-							<h1 className="tw-mt-4">Ghana Safe Stay Program</h1>
+							<h1 className="tw-mt-4">Visitors Health Insurance Platform</h1>
 						</Link>
 					</div>
 				</div>

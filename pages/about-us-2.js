@@ -17,7 +17,7 @@ const AboutUs2 = () => {
 					<div className="page-title-content">
 						<span className="sub-title dark-green-color">About Us</span>
 						<h1 className="nunito-font">
-							Welcome to the Ghana Safe Stay Programme Portal
+							Welcome to the Visitors Health Insurance Platform Portal
 						</h1>
 					</div>
 				</div>

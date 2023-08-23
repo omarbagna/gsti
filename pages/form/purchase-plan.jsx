@@ -1189,6 +1189,7 @@ const Form = () => {
 																</div>
 
 																{/** Health Information Area */}
+																{/** 
 																<div className="tw-w-full tw-h-fit tw-p-2 tw-gap-10 tw-flex tw-flex-col tw-justify-start tw-items-start">
 																	<div className="tw-w-full tw-gap-3 tw-flex tw-flex-col tw-justify-start tw-items-start">
 																		<h4 className="tw-w-full tw-text-tw-left tw-font-title tw-font-medium tw-text-2xl tw-text-[#7862AF]">
@@ -1250,38 +1251,7 @@ const Form = () => {
 																				</FormControl>
 																			)}
 																		/>
-																		{/*
-																		<Controller
-																			name={`insured_person[${index}].existing_conditions`}
-																			control={control}
-																			defaultValue={''}
-																			render={({
-																				field: { ref, ...field },
-																				fieldState: { error, invalid },
-																			}) => (
-																				<SelectInput
-																					{...field}
-																					ref={ref}
-																					error={invalid}
-																					helpertext={
-																						invalid ? error.message : null
-																					}
-																					label="Pre-existing Medical Conditions"
-																					options={[
-																						{
-																							name: 'male',
-																							value: 'male',
-																						},
-																						{
-																							name: 'female',
-																							value: 'female',
-																						},
-																					]}
-																					required
-																				/>
-																			)}
-																		/>
-																		*/}
+																		
 																		<Controller
 																			name={`insured_person[${index}].allergies`}
 																			control={control}
@@ -1331,6 +1301,7 @@ const Form = () => {
 																		/>
 																	</div>
 																</div>
+																*/}
 															</div>
 														</AccordionDetails>
 													</MuiAccordion>
@@ -1346,9 +1317,6 @@ const Form = () => {
 																last_name: '',
 																country: watch('country'),
 																address: '',
-																postal_zip: '',
-																city: '',
-																state: '',
 															})
 														}
 														className="tw-group tw-cursor-pointer tw-w-fit tw-flex tw-justify-start tw-items-center tw-gap-2">
@@ -1910,7 +1878,7 @@ const Form = () => {
 															</div>
 
 															{/** Health Information Area */}
-
+															{/**
 															<div className="tw-w-full tw-h-fit tw-p-2 tw-gap-3 tw-flex tw-flex-col tw-justify-start tw-items-start tw-border-[#171e41] tw-pb-4">
 																<h4 className="tw-w-full tw-pb-2 tw-border-b-2 tw-border-[#171e41] tw-text-tw-left tw-font-title tw-font-medium tw-text-2xl tw-text-[#171e41]">
 																	Health Information
@@ -1934,6 +1902,7 @@ const Form = () => {
 																	</div>
 																</div>
 															</div>
+															 */}
 														</AccordionDetails>
 													</MuiAccordion>
 												))}
@@ -2162,7 +2131,7 @@ const Form = () => {
 							</div>
 							<div className="tw-grid tw-grid-cols-2">
 								<div className="tw-w-full tw-flex tw-justify-start tw-text-sm tw-text-gray-600">
-									Coverage Starts
+									Effective Date
 								</div>
 								<p className="tw-w-full tw-flex tw-justify-end tw-text-sm tw-text-[#8e6abf] tw-font-bold">
 									{basicData &&
@@ -2171,7 +2140,7 @@ const Form = () => {
 							</div>
 							<div className="tw-grid tw-grid-cols-2">
 								<div className="tw-w-full tw-flex tw-justify-start tw-text-sm tw-text-gray-600">
-									Coverage Ends
+									Expiry Date
 								</div>
 								<p className="tw-w-full tw-flex tw-justify-end tw-text-sm tw-text-[#8e6abf] tw-font-bold">
 									{basicData &&

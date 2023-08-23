@@ -393,7 +393,7 @@ const Quote = () => {
 									<div className="tw-w-full tw-flex tw-flex-wrap-reverse tw-gap-3 tw-justify-between tw-items-center">
 										<span className="tw-w-fit tw-flex tw-justify-start tw-items-end tw-gap-1">
 											<h2 className="tw-font-title tw-font-bold tw-text-2xl lg:tw-text-3xl tw-text-[#171e41] tw-flex tw-justify-center tw-items-end tw-gap-1">
-												How many travellers?
+												Name of travellers
 											</h2>
 										</span>
 									</div>
@@ -630,7 +630,7 @@ const Quote = () => {
 													</div>
 													<div className="tw-grid tw-grid-cols-2 tw-place-items-center">
 														<div className="tw-w-full tw-flex tw-justify-start tw-text-sm tw-text-gray-500">
-															Coverage Starts
+															Effective Date
 														</div>
 														<p className="tw-w-full tw-flex tw-justify-end tw-text-sm tw-items-center tw-gap-0 tw-text-gray-600 tw-font-bold">
 															{format(
@@ -641,7 +641,7 @@ const Quote = () => {
 													</div>
 													<div className="tw-grid tw-grid-cols-2 tw-place-items-center">
 														<div className="tw-w-full tw-flex tw-justify-start tw-text-sm tw-text-gray-500">
-															Coverage Ends
+															Expiry Date
 														</div>
 														<p className="tw-w-full tw-flex tw-justify-end tw-text-sm tw-items-center tw-gap-2 tw-text-gray-600 tw-font-bold">
 															{format(
