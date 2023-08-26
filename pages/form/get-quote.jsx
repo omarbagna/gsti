@@ -128,7 +128,7 @@ const Quote = () => {
 						className="btn-style-one dark-green-color"
 						//disabled={selectedPlan === null ? true : false}
 						type="submit">
-						Purchase Plan <i className="bx bx-chevron-right"></i>
+						Proceed to Purchase <i className="bx bx-chevron-right"></i>
 					</button>
 				</div>
 			);
@@ -353,7 +353,7 @@ const Quote = () => {
 								<div className="tw-w-full tw-flex tw-flex-wrap-reverse tw-gap-3 tw-justify-between tw-items-center">
 									<span className="tw-w-fit tw-flex tw-justify-start tw-items-end tw-gap-1">
 										<h2 className="tw-font-title tw-font-bold tw-text-2xl lg:tw-text-3xl tw-text-[#171e41] tw-flex tw-justify-center tw-items-end tw-gap-1">
-											What country are you travelling in from?
+											What country are you travelling from?
 										</h2>
 									</span>
 								</div>

@@ -17,22 +17,22 @@ const Banner = () => {
 								className="sub-title"
 								data-aos="fade-up"
 								data-aos-duration="1200">
-								#Your gateway to a safe visit in Ghana
+								#Your Path to a Seamless, Safe, and Medically Secure Trip.
 							</span>
 							<h1
 								data-aos="fade-up"
 								data-aos-duration="1200"
 								data-aos-delay="100"
 								className="nunito-font">
-								Welcome to the Visitors Health Insurance Platform
+								Welcome to the Ghana Visitors Health Insurance Platform
 							</h1>
 							<p
 								data-aos="fade-up"
 								data-aos-duration="1200"
 								data-aos-delay="200">
-								Ghana welcomes you with open arms! The Visitors Health Insurance
-								Platform (VHIS) ensures that you have a seamless, safe, and
-								medically secure trip within our beautiful country
+								Ghana welcomes you with open arms! The Ghana Visitors Health
+								Insurance Platform (GVHIP) ensures that you have a seamless,
+								safe, and medically secure trip within our beautiful country
 							</p>
 							<div
 								className="btn-box"

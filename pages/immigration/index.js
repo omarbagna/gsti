@@ -720,7 +720,7 @@ const FindPolicy = () => {
 				{!notFound && !policyHolder && !findPolicy.isLoading && (
 					<span className="tw-bg-[#7862AF]/20 tw-w-full tw-h-fit tw-p-3 md:tw-p-6 tw-rounded-lg">
 						<h5 className="tw-mt-3 tw-w-full tw-text-left tw-text-[#7862AF] tw-font-semibold tw-text-lg md:tw-text-2xl">
-							VHIS Verification Portal
+							GVHIP Verification Portal
 						</h5>
 						<h6 className="tw-mt-3 tw-w-full tw-text-left tw-text-[#171e41] tw-font-medium tw-text-lg md:tw-text-xl">
 							Ensuring Every Visitor&apos;s Safe Stay in Ghana!
@@ -755,7 +755,7 @@ const FindPolicy = () => {
 							<br />
 							<br />
 							<strong className="tw-text-[#171e41]">A Warm Note:</strong>{' '}
-							Let&apos;s remember, while the VHIS is mandatory, it&apos;s also
+							Let&apos;s remember, while the GVHIP is mandatory, it&apos;s also
 							our way of showing that Ghana cares. Kindly guide visitors with
 							lapsed or missing policies to our dedicated helpdesk.
 						</p>
