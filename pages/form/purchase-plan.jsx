@@ -31,6 +31,7 @@ import {
 	ListItemText,
 	OutlinedInput,
 	InputLabel,
+	TextField,
 } from '@mui/material';
 import Accordion from '@/components/Accordion';
 
@@ -49,9 +50,11 @@ import { IoAdd } from 'react-icons/io5';
 import { AiFillSafetyCertificate, AiOutlineFilePdf } from 'react-icons/ai';
 //import { scrollIntoViewHelper } from 'helpers/scrollIntoViewHelper';
 import { planTabsData } from 'data/plansData';
-import axios, { axiosHubtel } from 'pages/api/axios';
+import axios from 'pages/api/axios';
 //import { useRouter } from 'next/router';
 import { allergies, conditions } from 'data/conditionsAndAllergies';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/material.css';
 
 const alertError = (title = null, text = null) => {
 	MySwal.fire({
@@ -140,6 +143,8 @@ const Form = () => {
 			applicant_type: 'other',
 		},
 	});
+
+	console.log(watch());
 
 	const { fields, append, remove } = useFieldArray({
 		control,
@@ -923,17 +928,34 @@ const Form = () => {
 																				field: { ref, ...field },
 																				fieldState: { error, invalid },
 																			}) => (
-																				<DefaultInput
-																					{...field}
-																					ref={ref}
-																					error={invalid}
-																					helpertext={
-																						invalid ? error.message : null
-																					}
-																					label="Phone Number"
-																					type="tel"
-																					required
-																				/>
+																				<FormControl error={invalid} required>
+																					<PhoneInput
+																						{...field}
+																						ref={ref}
+																						specialLabel="Phone number"
+																						placeholder="Phone number"
+																						searchStyle={{
+																							width: '90%',
+																							height: '40px',
+																						}}
+																						error={invalid}
+																						searchPlaceholder="Find country"
+																						inputStyle={{
+																							width: '100%',
+																							height: '55px',
+																							borderColor: invalid
+																								? 'red'
+																								: '#616B7D',
+																						}}
+																						excludeCountries={['gh']}
+																						country={'us'}
+																						countryCodeEditable={false}
+																						enableSearch={true}
+																					/>
+																					<FormHelperText>
+																						{invalid ? error.message : null}
+																					</FormHelperText>
+																				</FormControl>
 																			)}
 																		/>
 																	</div>
@@ -1081,17 +1103,34 @@ const Form = () => {
 																					field: { ref, ...field },
 																					fieldState: { error, invalid },
 																				}) => (
-																					<DefaultInput
-																						{...field}
-																						ref={ref}
-																						error={invalid}
-																						helpertext={
-																							invalid ? error.message : null
-																						}
-																						label="Phone Number"
-																						type="tel"
-																						required
-																					/>
+																					<FormControl error={invalid} required>
+																						<PhoneInput
+																							{...field}
+																							ref={ref}
+																							specialLabel="Phone number"
+																							placeholder="Phone number"
+																							searchStyle={{
+																								width: '90%',
+																								height: '40px',
+																							}}
+																							error={invalid}
+																							searchPlaceholder="Find country"
+																							inputStyle={{
+																								width: '100%',
+																								height: '55px',
+																								borderColor: invalid
+																									? 'red'
+																									: '#616B7D',
+																							}}
+																							excludeCountries={['gh']}
+																							country={'us'}
+																							countryCodeEditable={false}
+																							enableSearch={true}
+																						/>
+																						<FormHelperText>
+																							{invalid ? error.message : null}
+																						</FormHelperText>
+																					</FormControl>
 																				)}
 																			/>
 																		</div>
@@ -1152,36 +1191,54 @@ const Form = () => {
 																			/>
 																		</div>
 
-																		<Controller
-																			name={`insured_person[${index}].emergency_contact_ghana_telephone`}
-																			control={control}
-																			defaultValue={''}
-																			rules={{
-																				pattern: {
-																					value:
-																						/\+?(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*(\d{1,2})$/gi,
-																					message:
-																						'Please enter a valid phone number. Phone number must follow the international standard',
-																				},
-																				required: 'Please enter phone number',
-																			}}
-																			render={({
-																				field: { ref, ...field },
-																				fieldState: { error, invalid },
-																			}) => (
-																				<DefaultInput
-																					{...field}
-																					ref={ref}
-																					error={invalid}
-																					helpertext={
-																						invalid ? error.message : null
-																					}
-																					label="Phone Number"
-																					type="tel"
-																					required
-																				/>
-																			)}
-																		/>
+																		<div className="tw-w-full tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-5">
+																			<Controller
+																				name={`insured_person[${index}].emergency_contact_ghana_telephone`}
+																				control={control}
+																				defaultValue={''}
+																				rules={{
+																					pattern: {
+																						value:
+																							/\+?(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|4[987654310]|3[9643210]|2[70]|7|1)\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*\d\W*(\d{1,2})$/gi,
+																						message:
+																							'Please enter a valid phone number. Phone number must follow the international standard',
+																					},
+																					required: 'Please enter phone number',
+																				}}
+																				render={({
+																					field: { ref, ...field },
+																					fieldState: { error, invalid },
+																				}) => (
+																					<FormControl
+																						error={invalid}
+																						sx={{ width: '100%' }}
+																						required>
+																						<PhoneInput
+																							{...field}
+																							ref={ref}
+																							specialLabel="Phone number"
+																							placeholder="Phone number"
+																							error={invalid}
+																							//searchPlaceholder="Find country"
+																							inputStyle={{
+																								width: '100%',
+																								height: '55px',
+																								borderColor: invalid
+																									? 'red'
+																									: '#616B7D',
+																							}}
+																							onlyCountries={['gh']}
+																							country={'gh'}
+																							countryCodeEditable={false}
+																							enableSearch={false}
+																						/>
+																						<FormHelperText>
+																							{invalid ? error.message : null}
+																						</FormHelperText>
+																					</FormControl>
+																				)}
+																			/>
+																		</div>
 																	</div>
 																</div>
 
@@ -1457,15 +1514,32 @@ const Form = () => {
 																field: { ref, ...field },
 																fieldState: { error, invalid },
 															}) => (
-																<DefaultInput
-																	{...field}
-																	ref={ref}
-																	error={invalid}
-																	helpertext={invalid ? error.message : null}
-																	label="Phone number"
-																	type="tel"
-																	required
-																/>
+																<FormControl error={invalid} required>
+																	<PhoneInput
+																		{...field}
+																		ref={ref}
+																		specialLabel="Phone number"
+																		placeholder="Phone number"
+																		searchStyle={{
+																			width: '90%',
+																			height: '40px',
+																		}}
+																		error={invalid}
+																		searchPlaceholder="Find country"
+																		inputStyle={{
+																			width: '100%',
+																			height: '55px',
+																			borderColor: invalid ? 'red' : '#616B7D',
+																		}}
+																		excludeCountries={['gh']}
+																		country={'us'}
+																		countryCodeEditable={false}
+																		enableSearch={true}
+																	/>
+																	<FormHelperText>
+																		{invalid ? error.message : null}
+																	</FormHelperText>
+																</FormControl>
 															)}
 														/>
 														<Controller
@@ -1562,15 +1636,32 @@ const Form = () => {
 																field: { ref, ...field },
 																fieldState: { error, invalid },
 															}) => (
-																<DefaultInput
-																	{...field}
-																	ref={ref}
-																	error={invalid}
-																	helpertext={invalid ? error.message : null}
-																	label="Company Phone number"
-																	type="tel"
-																	required
-																/>
+																<FormControl error={invalid} required>
+																	<PhoneInput
+																		{...field}
+																		ref={ref}
+																		specialLabel="Phone number"
+																		placeholder="Phone number"
+																		searchStyle={{
+																			width: '90%',
+																			height: '40px',
+																		}}
+																		error={invalid}
+																		searchPlaceholder="Find country"
+																		inputStyle={{
+																			width: '100%',
+																			height: '55px',
+																			borderColor: invalid ? 'red' : '#616B7D',
+																		}}
+																		excludeCountries={['gh']}
+																		country={'us'}
+																		countryCodeEditable={false}
+																		enableSearch={true}
+																	/>
+																	<FormHelperText>
+																		{invalid ? error.message : null}
+																	</FormHelperText>
+																</FormControl>
 															)}
 														/>
 														<Controller
