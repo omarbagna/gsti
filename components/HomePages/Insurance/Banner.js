@@ -17,7 +17,7 @@ const Banner = () => {
 								data-aos="fade-up"
 								data-aos-duration="1200"
 								className="nunito-font">
-								Ghana Visitors Health Insurance Platform
+								Welcome to the Ghana Visitors Health Insurance Platform
 							</h1>
 							<span
 								className="sub-title lg:!tw-text-xl"
