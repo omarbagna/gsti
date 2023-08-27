@@ -128,7 +128,7 @@ const Quote = () => {
 						className="btn-style-one dark-green-color"
 						//disabled={selectedPlan === null ? true : false}
 						type="submit">
-						Proceed to Purchase <i className="bx bx-chevron-right"></i>
+						Purchase Plan <i className="bx bx-chevron-right"></i>
 					</button>
 				</div>
 			);
@@ -815,7 +815,7 @@ const Quote = () => {
 															checked={watch(`proceed_purchase`)}
 														/>
 													}
-													label={'I want to proceed to purchase'}
+													label={'Proceed to purchase'}
 												/>
 												<FormHelperText error>
 													{invalid ? error.message : null}
