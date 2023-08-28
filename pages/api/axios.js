@@ -1,5 +1,6 @@
 import axios from 'axios';
-const BASE_URL = 'https://gvhip.v1-backend-api.rxhealthbeta.com/api/v1';
+//importconst BASE_URL = 'https://gvhip.v1-backend-api.rxhealthbeta.com/api/v1';
+const BASE_URL = 'https://gssp-backend-api.rxhealthbeta.com/api/v1';
 
 export default axios.create({
 	baseURL: BASE_URL,
