@@ -31,15 +31,10 @@ import {
 	ListItemText,
 	OutlinedInput,
 	InputLabel,
-	TextField,
 } from '@mui/material';
 import Accordion from '@/components/Accordion';
 
-import {
-	BiMinus,
-	//BiCreditCardFront,
-	BiTime,
-} from 'react-icons/bi';
+import { BiTime } from 'react-icons/bi';
 import { BsGlobeEuropeAfrica } from 'react-icons/bs';
 //import { RiSecurePaymentLine } from 'react-icons/ri';
 //import axios from 'axios';
@@ -47,7 +42,7 @@ import { useMutation } from 'react-query';
 //import Button from '../../components/Button/Button';
 import { MdDelete, MdEdit, MdOutlineExpandMore } from 'react-icons/md';
 import { IoAdd } from 'react-icons/io5';
-import { AiFillSafetyCertificate, AiOutlineFilePdf } from 'react-icons/ai';
+import { AiOutlineFilePdf } from 'react-icons/ai';
 //import { scrollIntoViewHelper } from 'helpers/scrollIntoViewHelper';
 import { planTabsData } from 'data/plansData';
 import axios from 'pages/api/axios';
