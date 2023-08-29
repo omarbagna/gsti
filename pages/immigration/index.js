@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DashboardNav from '@/components/Layout/Navigations/DashboardNav';
 import { format } from 'date-fns';
 import { Controller, useForm } from 'react-hook-form';
@@ -67,9 +67,9 @@ const FindPolicy = () => {
 			function onScanSuccess(decodedText, decodedResult) {
 				// Handle on success condition with the decoded text or result.
 				//console.log(`Scan result: ${decodedText}`, decodedResult);
+				html5QrcodeScanner.clear();
 				setValue(`search_term`, decodedText);
 				// ...
-				html5QrcodeScanner.clear();
 				setShowScanner(false);
 				// ^ this will stop the scanner (video feed) and clear the scan area.
 			}
@@ -826,7 +826,7 @@ const FindPolicy = () => {
 
 			{showScanner && (
 				<div
-					className="tw-w-screen tw-h-screen tw-fixed tw-top-0 tw-left-0 tw-z-50 tw-flex tw-justify-center tw-items-end tw-bg-black/40"
+					className="tw-w-screen tw-h-screen tw-fixed tw-top-0 tw-left-0 tw-z-[99] tw-flex tw-justify-center tw-items-end tw-bg-black/40"
 					onClick={() => setShowScanner(false)}>
 					<div
 						data-aos="slide-up"
