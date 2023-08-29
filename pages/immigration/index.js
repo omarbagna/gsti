@@ -832,13 +832,13 @@ const FindPolicy = () => {
 						data-aos="slide-up"
 						data-aos-duration="800"
 						onClick={(e) => e.stopPropagation()}
-						className="tw-w-5/6 tw-h-4/5 tw-rounded-t-2xl tw-p-8 tw-bg-white tw-flex tw-flex-col tw-justify-start tw-items-center tw-gap-10">
+						className="tw-w-5/6 tw-h-4/5 tw-rounded-t-2xl tw-p-4 md:tw-p-8 tw-bg-white tw-flex tw-flex-col tw-justify-start tw-items-center tw-gap-10">
 						<h2 className="tw-font-medium tw-text-2xl md:tw-text-4xl tw-text-[#171e41] tw-flex tw-justify-start tw-items-start tw-gap-1">
 							Scan QR Code
 						</h2>
 
 						<div
-							className="tw-rounded-xl tw-w-2/3 tw-h-fit tw-overflow-hidden"
+							className="tw-rounded-xl tw-w-full md:tw-w-2/3 tw-h-fit tw-overflow-hidden"
 							id="reader"></div>
 					</div>
 				</div>
