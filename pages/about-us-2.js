@@ -5,7 +5,7 @@ import Target from '@/components/HomePages/Insurance/Target';
 import HowToApply from '@/components/HomePages/Insurance/HowToApply';
 //import Testimonials from '@/components/AboutUsTwo/Testimonials';
 import Faq from '@/components/AboutUsTwo/Faq';
-import JoinOurCommunity from '@/components/HomePages/Insurance/JoinOurCommunity';
+//import JoinOurCommunity from '@/components/HomePages/Insurance/JoinOurCommunity';
 import FooterFour from '@/components/Layout/Footer/FooterFour';
 
 const AboutUs2 = () => {
